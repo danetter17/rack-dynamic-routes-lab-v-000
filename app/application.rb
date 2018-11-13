@@ -7,7 +7,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match("/items/")
-      item = @@items.each do |item|
+      item = @@items.find do |item|
         item.name == item_name
       end
       
