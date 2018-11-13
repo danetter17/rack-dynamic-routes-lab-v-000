@@ -10,7 +10,10 @@ class Application
       item = @@items.each do |item|
         item.name == item_name
       end
-    elsif item.nil?
+      
+      if item.nil?
+        resp.write "Item not found"
+        resp.status
       
     else
       resp.write "Route not found"
