@@ -14,7 +14,9 @@ class Application
       if item.nil?
         resp.write "Item not found"
         resp.status = 400
-      end
+      else
+        resp.write item.
+    else
       
     else
       resp.write "Route not found"
