@@ -7,9 +7,7 @@ class Application
     req = Rack::Request.new(env)
     
     if req.path.match(/items/)
-      item = @@items.find do |item|
-        item.name == item_name
-      end
+      item = @@items.find{|item| item.name == item_name}
       
       if item.nil?
         resp.write "Item not found"
